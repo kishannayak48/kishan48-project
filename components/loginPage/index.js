@@ -1,7 +1,12 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 function LoginPage() {
-  return <div>i am login page</div>;
+  return (
+    <>
+      <div>hello world</div>
+    </>
+  );
 }
 
 export default LoginPage;
