@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Login from "./login";
 import LoginPage from "@/components/loginPage";
-import LandingPage from "@/components/loginPage/landingPage";
+import LandingPage from "@/components/landingPage";
 
 const inter = Inter({ subsets: ["latin"] });
 
