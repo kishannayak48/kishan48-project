@@ -1,3 +1,11 @@
 .roundButtonCust {
     line-height: 36px;
 }
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}

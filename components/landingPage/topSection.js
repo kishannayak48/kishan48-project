@@ -216,8 +216,12 @@ function TopSection() {
               </ul>
             </div>
 
-            <div className="position-relative">
-              <img src="assets/images/element/07.png" alt="" />
+            <div className="position-relative ">
+              <img
+                src="assets/images/kishan01.png"
+                alt=""
+                style={{ width: "110%", height: "auto" }}
+              />
             </div>
           </div>
         </div>
