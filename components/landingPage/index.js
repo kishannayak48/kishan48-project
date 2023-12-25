@@ -5,15 +5,15 @@ import HEAD_TITLES from "@/utils/constants/titleConstants";
 import HeadPage from "../layout/HeadPage";
 import TopSection from "./topSection";
 import CountSection from "./counterSections";
+import CounterSections from "./counterSections";
+import BecomeAnInstructor from "./becomeAnInstructor";
 function LandingPage() {
   return (
     <HeadPage title={HEAD_TITLES.home}>
       <main>
         <TopSection />
-        <CountSection />
-        {/* <CounterSections /> */}
-        {/* <BecomeAnInstructor /> */}
-        {/* <ReviewRating /> */}
+        <CounterSections />
+        <BecomeAnInstructor />
       </main>
     </HeadPage>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { useCountUp } from "use-count-up";
+import CountUp, { useCountUp } from "react-countup";
 
 function CounterSection(props) {
   const { containerStyle, title, icon, count, isMoreCount, counterRef } = props;
@@ -11,9 +11,6 @@ function CounterSection(props) {
       <div
         className={`d-flex justify-content-center align-items-center p-4 rounded-3 ${containerStyle}`}
       >
-        {/* <span className="display-6 lh-1 text-warning mb-0">
-          <i className="fas fa-tv"></i>
-        </span> */}
         {icon}
 
         <div className="ms-4 h6 fw-normal mb-0">
