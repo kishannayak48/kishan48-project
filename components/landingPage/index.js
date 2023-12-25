@@ -4,7 +4,7 @@ import React from "react";
 import HEAD_TITLES from "@/utils/constants/titleConstants";
 import HeadPage from "../layout/HeadPage";
 import TopSection from "./topSection";
-import CountSection from "./countSection";
+import CountSection from "./counterSections";
 function LandingPage() {
   return (
     <HeadPage title={HEAD_TITLES.home}>
