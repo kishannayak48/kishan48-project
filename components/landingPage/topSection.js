@@ -6,6 +6,7 @@ import { BiSolidBadgeCheck } from "react-icons/bi";
 import NewStudentImg from "./newStudentImg";
 import DotImg from "./dotSvg";
 import styles from "./styles.module.css";
+import Image from "next/image";
 
 function TopSection() {
   return (
@@ -147,13 +148,28 @@ function TopSection() {
             </figure>
 
             <div className="p-2 bg-white shadow rounded-3 position-absolute top-50 start-0 translate-middle-y mt-n7 d-none d-sm-block">
-              <img src="assets/images/client/science.svg" alt="Icon" />
+              <Image
+                src="/assets/images/client/science.svg"
+                alt="Icon"
+                height={50}
+                width={50}
+              />
             </div>
             <div className="p-2 bg-white shadow rounded-3 position-absolute top-0 end-0 me-5">
-              <img src="assets/images/client/angular.svg" alt="Icon" />
+              <Image
+                src="/assets/images/client/angular.svg"
+                alt="Icon"
+                height={50}
+                width={50}
+              />
             </div>
             <div className="p-2 bg-white shadow rounded-3 position-absolute top-50 end-0 translate-middle-y mt-5 ms-5 d-none d-lg-block z-index-9">
-              <img src="assets/images/client/figma.svg" alt="Icon" />
+              <Image
+                src="/assets/images/client/figma.svg"
+                alt="Icon"
+                height={50}
+                width={50}
+              />
             </div>
 
             <div className="p-3 bg-blur border border-light shadow rounded-4 position-absolute bottom-0 start-0 z-index-9 d-none d-xl-block mb-5 ms-5">
@@ -218,9 +234,9 @@ function TopSection() {
 
             <div className="position-relative ">
               <img
-                src="assets/images/kishan01.png"
+                src="assets/images/element/kishan01.png"
                 alt=""
-                style={{ width: "110%", height: "auto" }}
+                style={{ width: "70%", height: "auto" }}
               />
             </div>
           </div>

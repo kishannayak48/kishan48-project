@@ -55,7 +55,7 @@ function ReviewRating() {
                     <div className="avatar avatar-sm">
                       <Image
                         className="avatar-img rounded-1"
-                        src="/assets/images/avatar/09.jpg"
+                        src="/assets/images/avatar/logo3.jpg"
                         alt="avatar"
                         height={100}
                         width={100}
@@ -69,10 +69,12 @@ function ReviewRating() {
 
                   <div className="d-flex align-items-center mb-3">
                     <div className="avatar avatar-sm">
-                      <img
+                      <Image
                         className="avatar-img rounded-1"
-                        src="assets/images/avatar/04.jpg"
+                        src="/assets/images/avatar/04.jpg"
                         alt="avatar"
+                        height={50}
+                        width={50}
                       />
                     </div>
                     <div className="ms-2">
@@ -83,10 +85,12 @@ function ReviewRating() {
 
                   <div className="d-flex align-items-center">
                     <div className="avatar avatar-sm">
-                      <img
+                      <Image
                         className="avatar-img rounded-1"
-                        src="assets/images/avatar/02.jpg"
+                        src="/assets/images/avatar/02.jpg"
                         alt="avatar"
+                        height={50}
+                        width={50}
                       />
                     </div>
                     <div className="ms-2">
@@ -179,12 +183,14 @@ function ReviewRating() {
                     <p>
                       <span className="me-1 small">
                         <i className="fas fa-quote-left"></i>
+                        <FaQuoteLeft />
                       </span>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                       Tempore molestiae ex expedita?
                       <span className="ms-1 small">
                         <i className="fas fa-quote-right"></i>
                       </span>
+                      <FaQuoteRight />
                     </p>
                   </blockquote>
                   <Ratings stars={4.5} />
