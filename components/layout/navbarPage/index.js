@@ -9,7 +9,6 @@ import {
 } from "react-bootstrap";
 import { BsSearch, BsUiRadiosGrid } from "react-icons/bs";
 import Image from "next/image";
-import styles from "./navbarStyles.module.css";
 import Link from "next/link";
 
 function NavbarPage() {

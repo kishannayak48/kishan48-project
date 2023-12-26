@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-// import Ratings from "./ratings";
+import Ratings from "./Ratings";
 
 function ReviewRating() {
   return (
@@ -40,7 +40,7 @@ function ReviewRating() {
                       </span>
                     </p>
                   </blockquote>
-                  {/* <Ratings stars={4.5} /> */}
+                  <Ratings stars={4.5} />
                   <h6 className="mb-0">Carolyn Ortiz</h6>
                 </div>
               </div>
@@ -159,7 +159,7 @@ function ReviewRating() {
                   }}
                 >
                   <h5 className="text-white mb-0">3.5/5.0</h5>
-                  {/* <Ratings stars={3.5} /> */}
+                  <Ratings stars={3.5} />
                   <p className="text-white mb-0">Based on 3265 ratings</p>
                 </div>
               </div>
@@ -187,7 +187,7 @@ function ReviewRating() {
                       </span>
                     </p>
                   </blockquote>
-                  {/* <Ratings stars={2.5} /> */}
+                  <Ratings stars={4.5} />
                   <h6 className="mb-0">Dennis Barrett</h6>
                 </div>
               </div>
