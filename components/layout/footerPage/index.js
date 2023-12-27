@@ -36,7 +36,7 @@ function FooterPage() {
             <ul className="list-inline mb-0 mt-3">
               <li className="list-inline-item">
                 <a
-                  className="btn btn-white btn-sm shadow px-2 text-facebook"
+                  className="btn btn-white btn-sm shadow px-3 text-facebook"
                   href="#"
                 >
                   {/* <i className="fab fa-fw fa-facebook-f"></i> */}
@@ -45,7 +45,7 @@ function FooterPage() {
               </li>
               <li className="list-inline-item">
                 <a
-                  className="btn btn-white btn-sm shadow px-2 text-instagram"
+                  className="btn btn-white btn-sm shadow px-3 text-instagram"
                   href="#"
                 >
                   {/* <i className="fab fa-fw fa-instagram"></i> */}
@@ -54,16 +54,16 @@ function FooterPage() {
               </li>
               <li className="list-inline-item">
                 <a
-                  className="btn btn-white btn-sm shadow px-2 text-twitter"
+                  className="btn btn-white btn-sm shadow px-3 text-twitter"
                   href="#"
                 >
-                  {/* <i className="fab fa-fw fa-twitter"></i> */}
                   <FaTwitter />
+                  {/* <i className="fab fa-fw fa-twitter"></i> */}
                 </a>
               </li>
               <li className="list-inline-item">
                 <a
-                  className="btn btn-white btn-sm shadow px-2 text-linkedin"
+                  className="btn btn-white btn-sm shadow px-3 text-linkedin"
                   href="#"
                 >
                   {/* <i className="fab fa-fw fa-linkedin-in"></i> */}
@@ -173,8 +173,8 @@ function FooterPage() {
                   <Image
                     src="/assets/images/client/google-play.svg"
                     alt=""
-                    height={100}
-                    width={100}
+                    height={125}
+                    width={125}
                   />
                 </a>
               </div>
@@ -183,8 +183,8 @@ function FooterPage() {
                   <Image
                     src="/assets/images/client/app-store.svg"
                     alt="app-store"
-                    height={100}
-                    width={100}
+                    height={125}
+                    width={125}
                   />
                 </a>
               </div>
