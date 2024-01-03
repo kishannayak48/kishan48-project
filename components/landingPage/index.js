@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React from "react";
 
 import HEAD_TITLES from "@/utils/constants/titleConstants";
@@ -19,5 +18,4 @@ function LandingPage() {
     </HeadPage>
   );
 }
-
 export default LandingPage;
