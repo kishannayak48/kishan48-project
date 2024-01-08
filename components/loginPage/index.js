@@ -1,15 +1,19 @@
 import React from "react";
-import HeadPage from "../layout/HeadPage";
-import HEAD_TITLES from "@/utils/constants/titleConstants";
-import styles from "./styels.module.css"
-import { Button, Form, Spinner } from "react-bootstrap";
+import * as yup from "yup";
 import { Field, Formik } from "formik";
-import axios from "axios";
+import { Button, Form, Spinner } from "react-bootstrap";
 import { useRouter } from "next/router";
 
-import * as yup from "yup";
+import HeadPage from "../layout/HeadPage";
+import HEAD_TITLES from "@/utils/constants/titleConstants";
+import styles from "./styels.module.css";
 import InputField from "@/fields/inoutField";
 import { loginService } from "@/services/authServices";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Facebook } from "react-content-loader";
+
+
 const defaultValues = {
   email: "",
   password: "",
@@ -26,9 +30,12 @@ function Login() {
 
     if (res.success) {
       // window.location = "/users";
+      toast.success("Login Successful!");
+
       router.replace("/users");
     } else {
-      alert(res.message);
+      toast.error("Login Unsuccessful!");
+      // alert(res.message);
     }
     // await axios
     //   .post("https://reqres.in/api/login", {
@@ -53,7 +60,6 @@ function Login() {
     password: yup.string().required().min(6).max(20),
     // terms: yup.bool().required().oneOf([true], "Terms must be accepted"),
   });
-
   return (
     <>
       <HeadPage title={HEAD_TITLES.login}>
@@ -115,6 +121,7 @@ function Login() {
                                 className={`btn w-100 ${
                                   isSubmitting ? "bg-secondary" : "bg-primary"
                                 } bg-opacity-50 py-3 text-white me-2 mb-4 mb-sm-0`}
+                                // onClick={handleToast}
                               >
                                 {/* {isSubmitting ? "Submitting..." : "Login >>"} */}
                                 {isSubmitting ? (
@@ -127,6 +134,7 @@ function Login() {
                                   "Login"
                                 )}
                               </Button>
+                              <ToastContainer />
                             </div>
 
                             <div className="col-12 mt-4 d-flex justify-content-between">

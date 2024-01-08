@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import LayoutPage from "@/components/layout";
 import UsersPage from "@/components/usersPage";
-import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import useAuth from "@/utils/hooks/useAuth";
+import TaskList from "@/insertLoaderHere/myLoader";
 
 function Users() {
   const router = useRouter();
@@ -16,7 +16,11 @@ function Users() {
   // }, [validated]);
 
   if (validated) {
-    return <UsersPage />;
+    return (
+      <>
+        <UsersPage />;
+      </>
+    );
   }
 }
 
