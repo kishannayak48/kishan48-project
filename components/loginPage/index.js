@@ -11,8 +11,6 @@ import InputField from "@/fields/inoutField";
 import { loginService } from "@/services/authServices";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Facebook } from "react-content-loader";
-
 
 const defaultValues = {
   email: "",

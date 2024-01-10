@@ -87,7 +87,7 @@ function NavbarPage() {
             </div>
           </div>
           <Nav>
-            <Link href="/signup" className="nav-link">
+            <Link href="/singup" className="nav-link">
               Signup
             </Link>
             <Link href="/login" className="nav-link">
