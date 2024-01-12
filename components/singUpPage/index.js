@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-function SingUpPage() {
+function SignUpPage() {
   return (
     <section className="p-0">
       <div className="container">
@@ -91,4 +91,4 @@ function SingUpPage() {
   );
 }
 
-export default SingUpPage;
+export default SignUpPage;

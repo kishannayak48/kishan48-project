@@ -1,7 +1,6 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-
 export const loginService = async ({ email, password }) => {
   try {
     const res = await axios.post("https://reqres.in/api/login", {
@@ -11,7 +10,6 @@ export const loginService = async ({ email, password }) => {
     Cookies.set("gemstoken", res.data.token, {
       expires: new Date(new Date().getTime() + 10 * 60 * 1000),
     });
-
     return { success: true, message: "Successful login" };
   } catch (error) {
     if (error?.response?.status == 400) {

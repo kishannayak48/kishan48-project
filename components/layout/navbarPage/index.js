@@ -11,7 +11,10 @@ import { BsSearch, BsUiRadiosGrid } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
 
-function NavbarPage() {
+function NavbarPage(props) {
+  const handleClick = () => {
+    props.onClick();
+  };
   return (
     <Navbar data-bs-theme="primary">
       <Container fluid className="px-3 px-xl-5">
@@ -68,8 +71,19 @@ function NavbarPage() {
             <Link href="/" className="nav-link">
               Home
             </Link>
-            <Nav.Link href="#pricing">User List</Nav.Link>
-            <Nav.Link href="#pricing">Profile</Nav.Link>
+            <Link href="/users" className="nav-link">
+              User List
+            </Link>
+            <Link href="/number" className="nav-link">
+              Number
+            </Link>
+            <Link href="/sumCount" className="nav-link">
+              SumCount
+            </Link>
+            <Link href="/profile" className="nav-link">
+              Profile 
+            </Link>
+            {/* <Nav.Link href="/profile">Profile</Nav.Link> */}
           </Nav>
           <div className="nav my-3 my-xl-0 px-md-4 flex-nowrap align-items-center">
             <div className="nav-item w-100">
@@ -87,9 +101,14 @@ function NavbarPage() {
             </div>
           </div>
           <Nav>
-            <Link href="/singup" className="nav-link">
+            <Link href="/signup" className="nav-link">
               Signup
             </Link>
+
+            <Link href="/logout" className="nav-link" onClick={handleClick}>
+              logout
+            </Link>
+
             <Link href="/login" className="nav-link">
               Login
             </Link>
