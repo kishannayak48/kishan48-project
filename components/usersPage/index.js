@@ -2,11 +2,16 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import User from "./user";
 import ContentLoader from "react-content-loader";
+import { useDispatch, useSelector } from "react-redux";
+import { loadData } from "@/reducers/usersSlice";
+import MyPagination from "./myPagination";
 
 function UsersPage() {
-  const [usersData, setUsersData] = useState([]);
+  // const [usersData, setUsersData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+  const dispatch = useDispatch();
+  const usersList = useSelector((state) => state.users);
 
   const getUsersData = (page = 1) => {
     setIsLoading(true);
@@ -18,7 +23,8 @@ function UsersPage() {
         },
       })
       .then(function (res) {
-        setUsersData(res.data.data);
+        // setUsersData(res.data.data);
+        dispatch(loadData(res.data));
       })
       .catch(function (error) {
         if (error?.response?.status == 400) {
@@ -38,10 +44,6 @@ function UsersPage() {
   useEffect(() => {
     getUsersData(currentPage);
   }, [currentPage]);
-
-  const handlePageChange = (newPage) => {
-    setCurrentPage(newPage);
-  };
 
   const Loader1 = () => (
     <ContentLoader
@@ -130,30 +132,23 @@ function UsersPage() {
           <div className="col">
             <div className="candidate-list">
               {isLoading &&
-                (currentPage === 1 ? (
+                (usersList.currentPage === 1 ? (
                   <Loader1 />
-                ) : currentPage === 2 ? (
+                ) : usersList.currentPage === 2 ? (
                   <Loader2 />
                 ) : (
                   <Loader3 />
                 ))}
               {!isLoading &&
-                usersData.map((userData) => (
+                usersList.data.map((userData) => (
                   <User key={userData.id} data={userData} />
                 ))}
             </div>
-            <div className="pagination">
-              <button
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-              >
-                Previous
-              </button>
-              <span>Page {currentPage}</span>
-              <button onClick={() => handlePageChange(currentPage + 1)}>
-                Next
-              </button>
-            </div>
+            <MyPagination
+              totalPages={usersList.totalPages}
+              currentPage={usersList.currentPage}
+              handlePageChange
+            />
           </div>
         </div>
       </div>
