@@ -4,6 +4,6 @@ import sumSlice from "./sumSlice";
 
 const rootReducer = combineReducers({
   sumCountRedu: sumSlice,
-  NumberRedu: numberSlice,
+  numberRedu: numberSlice,
 });
 export default rootReducer;

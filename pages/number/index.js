@@ -1,12 +1,11 @@
 import LayoutPage from "@/components/layout";
-import NumberPage from "@/components/numberPage";
+import SumCountPage from "@/components/sumCountPage";
 import React from "react";
-import { number } from "yup";
 
 function Number() {
-  return <NumberPage />;
+  return <SumCountPage page="Number" />;
 }
-number.getLayout = function getLayout(page) {
+Number.getLayout = function getLayout(page) {
   return <LayoutPage>{page}</LayoutPage>;
 };
 export default Number;

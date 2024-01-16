@@ -3,7 +3,11 @@ import SumCountPage from "@/components/sumCountPage";
 import React from "react";
 
 function sumCount() {
-  return <SumCountPage />;
+  return (
+    <>
+      <SumCountPage />
+    </>
+  );
 }
 sumCount.getLayout = function getLayout(page) {
   return <LayoutPage>{page}</LayoutPage>;

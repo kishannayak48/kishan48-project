@@ -9,7 +9,6 @@ function Profile() {
     <>
       <ProfilePage />
       <BecomeAnInstructor />
-
       <ReviewRating />
     </>
   );
