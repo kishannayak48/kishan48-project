@@ -2,7 +2,7 @@ import React from "react";
 import Pagination from "react-bootstrap/Pagination";
 
 function MyPagination(props) {
-  const { totalPages, currentPage, handlePageChange } = props;
+  const { totalPages, currentPage } = props;
 
   let items = [];
   for (let number = 1; number <= totalPages; number++) {

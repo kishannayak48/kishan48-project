@@ -136,10 +136,10 @@ function Login() {
                             </div>
 
                             <div className="col-12 mt-4 d-flex justify-content-between">
-                              <a href="./index.html">
+                              <a href="./home">
                                 <i className="fa fa-arrow-left"></i> back
                               </a>
-                              <a href="signup.html">
+                              <a href="./signup">
                                 {" "}
                                 Singup <i className="fa fa-arrow-right"></i>
                               </a>

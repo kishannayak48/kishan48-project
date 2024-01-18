@@ -7,13 +7,12 @@ import { loadData } from "@/reducers/usersSlice";
 import MyPagination from "./myPagination";
 
 function UsersPage() {
-  // const [usersData, setUsersData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [currentPage, setCurrentPage] = useState(1);
   const dispatch = useDispatch();
   const usersList = useSelector((state) => state.users);
 
-  const getUsersData = (page = 1) => {
+
+  const getUsersData = (page) => {
     setIsLoading(true);
 
     axios
@@ -42,8 +41,8 @@ function UsersPage() {
   };
 
   useEffect(() => {
-    getUsersData(currentPage);
-  }, [currentPage]);
+    getUsersData();
+  }, []);
 
   const Loader1 = () => (
     <ContentLoader
@@ -144,13 +143,12 @@ function UsersPage() {
                   <User key={userData.id} data={userData} />
                 ))}
             </div>
-            <MyPagination
-              totalPages={usersList.totalPages}
-              currentPage={usersList.currentPage}
-              handlePageChange
-            />
           </div>
         </div>
+        <MyPagination
+          totalPages={usersList.totalPages}
+          currentPage={usersList.currentPage}
+        />
       </div>
     </section>
   );

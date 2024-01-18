@@ -5,6 +5,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 const SumCountPage = ({ page }) => {
   const allData = useSelector((state) => state.sumCountRedu);
+  const users = useSelector((state) => state.users);
+  console.log("===Counter Page users data=====", users);
+
   const dispatch = useDispatch();
 
   console.log("===allData=====", allData);
